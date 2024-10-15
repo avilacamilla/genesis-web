@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+// components
+import ContactInfo from './contact-info.vue'
 
 const email = ref('')
 const nome = ref('')
@@ -13,15 +15,8 @@ const successMessage = ref('')
 <template>
   <UFooter>
     <template #top>
-      <div class="footer-grid bg-black w-full">
-        <div class="contact-info">
-          <p><strong>Suporte:</strong> +55 (27) 3327-6976</p>
-          <p><strong>Comercial:</strong> +55 (27) 99255-8735</p>
-          <p><strong>Email:</strong> comercial@clinux.com.br</p>
-          <p><strong>SAC:</strong> sac@clinux.com.br</p>
-          <p><strong>HORÁRIO DE FUNCIONAMENTO:</strong></p>
-          <p>De segunda a sexta, de 8h às 18h.</p>
-        </div>
+      <div class="footer-grid w-full">
+        <ContactInfo />
 
         <div class="contact-form">
           <form @submit.prevent="">
@@ -92,26 +87,21 @@ const successMessage = ref('')
 
 <!-- Styles -->
 <style scoped>
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
-    width: 100%;
-  }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+}
 
-  .contact-info {
-    font-size: .9rem;
-    line-height: 1.8;
-  }
+.contact-form {
+  max-width: 50rem;
+}
 
-  .contact-form {
-    max-width: 50rem;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 </style>
