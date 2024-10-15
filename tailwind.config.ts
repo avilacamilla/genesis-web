@@ -8,10 +8,9 @@ export default <Partial<Config>>{
         sans: ['DM Sans', ...defaultTheme.fontFamily.sans]
       },
       colors: {
-        primary: '#1E40AF', // Exemplo de cor primária personalizada
-        secondary: '#9333EA', // Exemplo de cor secundária personalizada
-        accent: '#F59E0B' // Exemplo de cor de destaque
-        // Adicione mais cores conforme necessário
+        primary: '#fff',
+        secondary: '#525252',
+        accent: '#236b97'
       }
     }
   }
