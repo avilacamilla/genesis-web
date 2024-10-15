@@ -1,97 +1,85 @@
 <script setup lang="ts">
-const links = [{
-  label: 'Resources',
-  children: [{
-    label: 'Help center'
-  }, {
-    label: 'Docs'
-  }, {
-    label: 'Roadmap'
-  }, {
-    label: 'Changelog'
-  }]
-}, {
-  label: 'Features',
-  children: [{
-    label: 'Affiliates'
-  }, {
-    label: 'Portal'
-  }, {
-    label: 'Jobs'
-  }, {
-    label: 'Sponsors'
-  }]
-}, {
-  label: 'Company',
-  children: [{
-    label: 'About'
-  }, {
-    label: 'Pricing'
-  }, {
-    label: 'Careers'
-  }, {
-    label: 'Blog'
-  }]
-}]
-
-const toast = useToast()
+import { ref } from 'vue'
 
 const email = ref('')
+const nome = ref('')
+const empresa = ref('')
+const telefone = ref('')
+const mensagem = ref('')
 const loading = ref(false)
-
-function onSubmit() {
-  loading.value = true
-
-  setTimeout(() => {
-    toast.add({
-      title: 'Subscribed!',
-      description: 'You\'ve been subscribed to our newsletter.'
-    })
-
-    loading.value = false
-  }, 1000)
-}
+const successMessage = ref('')
 </script>
 
 <template>
   <UFooter>
     <template #top>
-      <UFooterColumns :links="links">
-        <template #right>
-          <form @submit.prevent="onSubmit">
-            <UFormGroup
-              label="Subscribe to our newsletter"
-              :ui="{ container: 'mt-3' }"
-            >
+      <div class="footer-grid">
+        <div class="contact-info">
+          <p><strong>Suporte:</strong> +55 (27) 3327-6976</p>
+          <p><strong>Comercial:</strong> +55 (27) 99255-8735</p>
+          <p><strong>Email:</strong> comercial@clinux.com.br</p>
+          <p><strong>SAC:</strong> sac@clinux.com.br</p>
+          <p><strong>HORÁRIO DE FUNCIONAMENTO:</strong></p>
+          <p>De segunda a sexta, de 8h às 18h.</p>
+        </div>
+
+        <div class="contact-form">
+          <form @submit.prevent="">
+            <UFormGroup label="Entre em contato">
+              <div class="grid grid-cols-2 gap-4">
+                <UInput
+                  v-model="nome"
+                  placeholder="Nome"
+                  required
+                />
+                <UInput
+                  v-model="email"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+                <UInput
+                  v-model="empresa"
+                  placeholder="Empresa"
+                />
+                <UInput
+                  v-model="telefone"
+                  placeholder="Telefone"
+                />
+              </div>
               <UInput
-                v-model="email"
-                type="email"
-                placeholder="Enter your email"
-                :ui="{ icon: { trailing: { pointer: '' } } }"
+                v-model="mensagem"
+                placeholder="Mensagem"
+                type="textarea"
+                class="mt-4"
                 required
-                size="xl"
-                autocomplete="off"
-                class="max-w-sm"
-              >
-                <template #trailing>
-                  <UButton
-                    type="submit"
-                    size="xs"
-                    :label="loading ? 'Subscribing' : 'Subscribe'"
-                    :loading="loading"
-                  />
-                </template>
-              </UInput>
+              />
+
+              <div class="mt-4">
+                <UCheckbox label="Li e concordo com a Política de Privacidade" required />
+                <URecaptcha class="mt-4" />
+              </div>
+
+              <UButton
+                type="submit"
+                class="mt-4"
+                :label="loading ? 'Enviando...' : 'Enviar mensagem'"
+                :loading="loading"
+                block
+              />
+
+              <!-- Exibe a mensagem de sucesso -->
+              <p v-if="successMessage" class="text-green-500 mt-4">{{ successMessage }}</p>
             </UFormGroup>
           </form>
-        </template>
-      </UFooterColumns>
+        </div>
+      </div>
     </template>
 
     <template #left>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
         <NuxtLink to="/termos">
-          Copyright © 2020. All rights reserved.
+          Copyright © 2020. Todos os direitos reservados.
         </NuxtLink>
       </p>
     </template>
@@ -101,3 +89,28 @@ function onSubmit() {
     </template>
   </UFooter>
 </template>
+
+<!-- Styles -->
+<style scoped>
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .contact-info {
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .contact-form {
+    max-width: 50rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+</style>
