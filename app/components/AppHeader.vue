@@ -6,12 +6,10 @@ const links = computed(() => [{
   label: 'Início',
   to: '/',
   icon: 'i-heroicons-cube-transparent'
-  // active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
 }, {
   label: 'Institucional',
   to: '/institucional',
   icon: 'i-heroicons-credit-card'
-  // active: activeHeadings.value.includes('pricing') && !activeHeadings.value.includes('testimonials')
 }, {
   label: 'Clinux',
   to: '/clinux',
@@ -20,33 +18,24 @@ const links = computed(() => [{
 }, {
   label: 'PACS DICOMVIX',
   to: '/pacs-dicomvix',
-  icon: 'i-heroicons-question-mark-circle',
-  active: activeHeadings.value.includes('faq')
+  icon: 'i-heroicons-question-mark-circle'
 }, {
   label: 'Blog',
-  to: 'https://blog.gtecnologia.com.br/', // Checar a possibilidade de fazer a página do blog dentro do projeto
-  icon: 'i-heroicons-document-text',
-  active: activeHeadings.value.includes('blog')
+  to: 'https://blog.gtecnologia.com.br/', // Desenvolver Blog dentro do projeto
+  icon: 'i-heroicons-document-text'
 }, {
   label: 'Suporte',
   to: '/suporte',
-  icon: 'i-heroicons-lifebuoy',
-  active: activeHeadings.value.includes('support')
+  icon: 'i-heroicons-lifebuoy'
 }, {
   label: 'Contato',
   to: '/contato',
   icon: 'i-heroicons-phone',
-  active: activeHeadings.value.includes('contact')
+  active: activeHeadings.value.includes('contato')
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials'),
-    document.querySelector('#faq'),
-    document.querySelector('#blog'),
-    document.querySelector('#support'),
     document.querySelector('#contact')
   ])
 })
