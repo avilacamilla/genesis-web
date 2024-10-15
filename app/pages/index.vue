@@ -45,7 +45,7 @@ useSeoMeta({
         </UBadge>
       </template>
 
-      <ImagePlaceholder />
+      <!-- <ImagePlaceholder /> -->
 
       <ULandingLogos
         :title="page.logos.title"

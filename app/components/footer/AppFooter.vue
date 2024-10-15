@@ -13,7 +13,7 @@ const successMessage = ref('')
 <template>
   <UFooter>
     <template #top>
-      <div class="footer-grid">
+      <div class="footer-grid bg-black w-full">
         <div class="contact-info">
           <p><strong>Suporte:</strong> +55 (27) 3327-6976</p>
           <p><strong>Comercial:</strong> +55 (27) 99255-8735</p>
@@ -97,6 +97,7 @@ const successMessage = ref('')
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 2rem 0;
+    width: 100%;
   }
 
   .contact-info {
