@@ -2,6 +2,14 @@
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
+// Função para rolar até o footer
+function scrollToFooter() {
+  const footer = document.getElementById('app-footer')
+  if (footer) {
+    footer.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
 const links = computed(() => [{
   label: 'Início',
   to: '/',
@@ -17,11 +25,11 @@ const links = computed(() => [{
   active: activeHeadings.value.includes('testimonials')
 }, {
   label: 'PACS DICOMVIX',
-  to: '/pacs-dicomvix',
+  to: '/pacsDicomvix',
   icon: 'i-heroicons-question-mark-circle'
 }, {
   label: 'Blog',
-  to: 'https://blog.gtecnologia.com.br/', // Desenvolver Blog dentro do projeto
+  to: 'https://blog.gtecnologia.com.br/',
   icon: 'i-heroicons-document-text'
 }, {
   label: 'Suporte',
@@ -29,54 +37,70 @@ const links = computed(() => [{
   icon: 'i-heroicons-lifebuoy'
 }, {
   label: 'Contato',
-  to: '/contato',
+  to: '#',
   icon: 'i-heroicons-phone',
-  active: activeHeadings.value.includes('contato')
+  clickHandler: scrollToFooter // Associa a função de scroll ao link
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
-    document.querySelector('#contact')
+    document.querySelector('#contato')
   ])
 })
 </script>
 
 <template>
-  <UHeader :links="links">
-    <template #logo>
-      <img
-        src="/icons/logo-genesis.png"
-        alt="Logo Genesis"
-        class="h-8"
+  <!-- Cabeçalho com fundo branco para a logo -->
+  <div class="bg-white py-2 flex justify-center">
+    <img
+      src="/icons/logo-genesis.png"
+      alt="Logo Genesis"
+      class="h-16 w-auto"
+    >
+  </div>
+
+  <!-- Barra de navegação com fundo azul -->
+  <nav class="bg-accent text-white py-4 px-6 shadow-lg">
+    <ul class="flex justify-center space-x-8">
+      <li
+        v-for="link in links"
+        :key="link.label"
       >
-    </template>
-
-    <template #right>
-      <UButton
-        label="Sign in"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
-        class="hidden lg:flex bg-primary text-white"
-      />
-    </template>
-
-    <template #panel>
-      <UAsideLinks :links="links" />
-
-      <UDivider class="my-6" />
-
-      <UButton
-        label="Sign in"
-        color="white"
-        block
-        class="mb-3 bg-secondary text-white"
-      />
-      <UButton
-        label="Get started"
-        block
-        class="bg-primary text-white"
-      />
-    </template>
-  </UHeader>
+        <NuxtLink
+          v-if="!link.clickHandler"
+          :to="link.to"
+          class="hover:underline"
+        >
+          {{ link.label }}
+        </NuxtLink>
+        <button
+          v-else
+          class="hover:underline focus:outline-none"
+          @click="link.clickHandler"
+        >
+          {{ link.label }}
+        </button>
+      </li>
+    </ul>
+  </nav>
 </template>
+
+<!-- Styles -->
+<style scoped>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li a,
+  li button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  li a:hover,
+  li button:hover {
+    text-decoration: underline;
+  }
+</style>

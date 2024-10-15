@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // components
-import ContactInfo from './contact-info.vue'
+import ContactInfo from './ContatoInfo.vue'
 
 const email = ref('')
 const nome = ref('')
@@ -13,7 +13,7 @@ const successMessage = ref('')
 </script>
 
 <template>
-  <UFooter>
+  <UFooter id="app-footer">
     <template #top>
       <div class="footer-grid w-full">
         <ContactInfo />
@@ -51,7 +51,10 @@ const successMessage = ref('')
               />
 
               <div class="mt-4">
-                <UCheckbox label="Li e concordo com a Política de Privacidade" required />
+                <UCheckbox
+                  label="Li e concordo com a Política de Privacidade"
+                  required
+                />
                 <URecaptcha class="mt-4" />
               </div>
 
@@ -64,7 +67,12 @@ const successMessage = ref('')
               />
 
               <!-- Exibe a mensagem de sucesso -->
-              <p v-if="successMessage" class="text-green-500 mt-4">{{ successMessage }}</p>
+              <p
+                v-if="successMessage"
+                class="text-green-500 mt-4"
+              >
+                {{ successMessage }}
+              </p>
             </UFormGroup>
           </form>
         </div>

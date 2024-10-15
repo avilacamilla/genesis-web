@@ -12,7 +12,7 @@
 <!-- Styles -->
 <style scoped>
     .contact-info {
-    font-size: .9rem;
-    line-height: 1.8;
+      font-size: .9rem;
+      line-height: 1.8;
     }
 </style>
