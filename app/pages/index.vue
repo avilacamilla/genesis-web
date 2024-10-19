@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// Components
+import HeroSection from '~/components/home/heroSection/HeroSection.vue'
+import FeaturesSection from '~/components/home/features/FeaturesSection.vue'
+
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
 useSeoMeta({
@@ -11,61 +15,18 @@ useSeoMeta({
 
 <template>
   <div>
-    <ULandingHero
-      :title="page.hero.title"
-      :description="page.hero.description"
-      :links="page.hero.links"
-    >
-      <template #headline>
-        <UBadge
-          v-if="page.hero.headline"
-          variant="subtle"
-          size="lg"
-          class="relative rounded-full font-semibold"
-        >
-          <NuxtLink
-            :to="page.hero.headline.to"
-            target="_blank"
-            class="focus:outline-none"
-            tabindex="-1"
-          >
-            <span
-              class="absolute inset-0"
-              aria-hidden="true"
-            />
-          </NuxtLink>
+    <!-- HeroSection -->
+    <HeroSection />
 
-          {{ page.hero.headline.label }}
-
-          <UIcon
-            v-if="page.hero.headline.icon"
-            :name="page.hero.headline.icon"
-            class="ml-1 w-4 h-4 pointer-events-none"
-          />
-        </UBadge>
-      </template>
-
-      <!-- <ImagePlaceholder /> -->
-
-      <ULandingLogos
-        :title="page.logos.title"
-        align="center"
-      >
-        <UIcon
-          v-for="icon in page.logos.icons"
-          :key="icon"
-          :name="icon"
-          class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white"
-        />
-      </ULandingLogos>
-    </ULandingHero>
+    <!-- FeaturesSection -->
+    <FeaturesSection />
 
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
       :headline="page.features.headline"
     >
-      <UPageGrid
+      <!-- <UPageGrid
         id="features"
         class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
       >
@@ -74,7 +35,7 @@ useSeoMeta({
           :key="index"
           v-bind="item"
         />
-      </UPageGrid>
+      </UPageGrid> -->
     </ULandingSection>
 
     <ULandingSection

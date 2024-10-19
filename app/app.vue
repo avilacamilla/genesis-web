@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import AppHeader from './components/header/AppHeader.vue'
-import AppFooter from './components/footer/AppFooter.vue'
+import AppHeader from './components/shared/header/AppHeader.vue'
+import AppFooter from './components/shared/footer/AppFooter.vue'
+import AppCopy from './components/shared/copyright/AppCopy.vue'
 
 useHead({
   meta: [
@@ -29,6 +30,8 @@ useSeoMeta({
   </UMain>
 
   <AppFooter />
+
+  <AppCopy />
 
   <UNotifications />
 </template>

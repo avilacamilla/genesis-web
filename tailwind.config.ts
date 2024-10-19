@@ -13,5 +13,8 @@ export default <Partial<Config>>{
         accent: '#236b97'
       }
     }
+  },
+  corePlugins: {
+    preflight: true // Habilita o preflight para aplicar estilos base
   }
 }

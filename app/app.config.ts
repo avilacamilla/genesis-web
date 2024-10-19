@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    primary: 'indigo',
+    primary: 'accent', // Mantém a cor principal como accent
     gray: 'zinc',
     variables: {
       light: {
@@ -14,29 +14,24 @@ export default defineAppConfig({
       rounded: 'rounded-full',
       default: {
         size: 'md',
-        color: 'black'
+        color: 'white'
       }
     },
     input: {
       rounded: 'rounded-full'
     },
     header: {
-      wrapper: 'lg:!border-transparent bg-gray-50 dark:bg-gray-950',
       links: {
-        wrapper: 'ring-1 ring-gray-200 dark:ring-gray-800 px-3 gap-x-0 rounded-full',
         base: 'py-2 px-4 font-medium transition-colors relative after:absolute after:-bottom-px after:inset-x-2 after:h-px after:rounded-full after:opacity-0 after:bg-gray-900 dark:after:bg-white after:transition-opacity',
-        active: 'text-gray-900 dark:text-white after:opacity-100',
+        active: 'text-white dark:text-white after:opacity-100',
         inactive: 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
       }
     },
     footer: {
       top: {
-        wrapper: 'border-t border-gray-200 dark:border-gray-800',
-        container: 'py-8 lg:py-16'
+        container: 'py-0 lg:py-16'
       },
-      bottom: {
-        wrapper: 'border-t border-gray-200 dark:border-gray-800'
-      }
+      bottom: {}
     },
     pricing: {
       card: {
@@ -44,11 +39,15 @@ export default defineAppConfig({
         features: {
           item: {
             icon: {
-              base: 'text-gray-900 dark:text-white'
+              base: 'text-white dark:text-white'
             }
           }
         }
       }
+    },
+    landingSection: {
+      title: 'text-white',
+      description: 'text-white'
     }
   }
 })

@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
+
+// Controle do menu hambúrguer
+const isMenuOpen = ref(false)
+
+// Função para alternar o menu
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value
+}
 
 // Função para rolar até o footer
 function scrollToFooter() {
   const footer = document.getElementById('app-footer')
   if (footer) {
     footer.scrollIntoView({ behavior: 'smooth' })
+    isMenuOpen.value = false // Fechar o menu após o clique
   }
 }
 
@@ -16,7 +27,7 @@ const links = computed(() => [{
   icon: 'i-heroicons-cube-transparent'
 }, {
   label: 'Institucional',
-  to: '/institucional',
+  to: '/institutional',
   icon: 'i-heroicons-credit-card'
 }, {
   label: 'Clinux',
@@ -33,7 +44,7 @@ const links = computed(() => [{
   icon: 'i-heroicons-document-text'
 }, {
   label: 'Suporte',
-  to: '/suporte',
+  to: '/support',
   icon: 'i-heroicons-lifebuoy'
 }, {
   label: 'Contato',
@@ -51,17 +62,29 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 
 <template>
   <!-- Cabeçalho com fundo branco para a logo -->
-  <div class="bg-white py-2 flex justify-center">
+  <div class="bg-white py-2 flex md:justify-center justify-between items-center px-4">
     <img
       src="/icons/logo-genesis.png"
       alt="Logo Genesis"
       class="h-16 w-auto"
     >
+    <!-- Botão do menu hambúrguer para dispositivos móveis -->
+    <button
+      class="md:hidden text-2xl focus:outline-none text-accent p-2 rounded"
+      @click="toggleMenu"
+    >
+      ☰
+    </button>
   </div>
 
   <!-- Barra de navegação com fundo azul -->
-  <nav class="bg-accent text-white py-4 px-6 shadow-lg">
-    <ul class="flex justify-center space-x-8">
+  <nav
+    :class="[
+      'bg-accent text-white py-4 px-6 shadow-lg md:flex md:justify-center md:space-x-8',
+      { block: isMenuOpen, hidden: !isMenuOpen }
+    ]"
+  >
+    <ul class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
       <li
         v-for="link in links"
         :key="link.label"
@@ -70,6 +93,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
           v-if="!link.clickHandler"
           :to="link.to"
           class="hover:underline"
+          @click="isMenuOpen = false"
         >
           {{ link.label }}
         </NuxtLink>
@@ -102,5 +126,11 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   li a:hover,
   li button:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 800px) {
+    nav {
+      display: flex !important;
+    }
   }
 </style>

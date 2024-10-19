@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // components
-import ContactInfo from './ContatoInfo.vue'
+import ContactInfo from './ContactInfo.vue'
 
 const email = ref('')
 const nome = ref('')
@@ -15,38 +15,45 @@ const successMessage = ref('')
 <template>
   <UFooter id="app-footer">
     <template #top>
-      <div class="footer-grid w-full">
+      <div class="footer-grid w-full p-0">
         <ContactInfo />
 
-        <div class="contact-form">
+        <div class="contact-form p-0">
           <form @submit.prevent="">
-            <UFormGroup label="Entre em contato">
+            <UFormGroup
+              label="Entre em contato"
+              class="p-0"
+            >
               <div class="grid grid-cols-2 gap-4">
                 <UInput
                   v-model="nome"
                   placeholder="Nome"
                   required
+                  class="p-0"
                 />
                 <UInput
                   v-model="email"
                   placeholder="Email"
                   type="email"
                   required
+                  class="p-0"
                 />
                 <UInput
                   v-model="empresa"
                   placeholder="Empresa"
+                  class="p-0"
                 />
                 <UInput
                   v-model="telefone"
                   placeholder="Telefone"
+                  class="p-0"
                 />
               </div>
               <UInput
                 v-model="mensagem"
                 placeholder="Mensagem"
                 type="textarea"
-                class="mt-4"
+                class="mt-4 p-0"
                 required
               />
 
@@ -78,38 +85,14 @@ const successMessage = ref('')
         </div>
       </div>
     </template>
-
-    <template #left>
-      <p class="text-gray-500 dark:text-gray-400 text-sm">
-        <NuxtLink to="/termos">
-          Copyright © 2020. Todos os direitos reservados.
-        </NuxtLink>
-      </p>
-    </template>
-
-    <template #right>
-      <UColorModeButton size="sm" />
-    </template>
   </UFooter>
 </template>
 
 <!-- Styles -->
 <style scoped>
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.contact-form {
-  max-width: 50rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
+  .footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+  }
 </style>
