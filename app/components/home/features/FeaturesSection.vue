@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <UContainer class="text-center space-y-4 mt-[5rem]">
+  <UContainer class="text-center space-y-4 mt-[5rem] mb-[5rem]">
     <!-- Imagem central -->
     <NuxtImg
       src="/images/bg-features.svg"

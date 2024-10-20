@@ -2,12 +2,9 @@
 // Carregar o conteúdo de texto de heroSection.yml
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
-// Usa o router para navegação
-const router = useRouter()
-
-// Função para navegar para a rota /contactRequest
-const navigateToContactRequest = () => {
-  router.push('/contactRequest')
+// Função para abrir a rota /contactRequest em uma nova aba
+const openContactRequestInNewTab = () => {
+  window.open('/contactRequest', '_blank')
 }
 </script>
 
@@ -37,14 +34,14 @@ const navigateToContactRequest = () => {
       <UButton
         label="Nós ligamos para você"
         class="bg-white text-accent py-4 px-6 text-xl max-w-xs sm:max-w-none mt-6"
-        @click="navigateToContactRequest"
+        @click="openContactRequestInNewTab"
       />
     </UContainer>
   </UContainer>
 </template>
 
 <style scoped>
-.override-text-color * {
-  color: white !important;
-}
+  .override-text-color * {
+    color: white !important;
+  }
 </style>

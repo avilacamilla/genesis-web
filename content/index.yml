@@ -12,16 +12,13 @@ heroSection:
       target: _blank
       size: xl
 
-logos:
-  titleImage:
-    src: https://i.pravatar.cc/120?img=3
-    loading: lazy
-  icons:
-    - i-simple-icons-amazonaws
-    - i-simple-icons-heroku
-    - i-simple-icons-netlify
-    - i-simple-icons-vercel
-    - i-simple-icons-cloudflare
+clinuxSection:
+  title: Clinux
+  subtitle: Gestão de clínicas
+  subtitle2: O CLINUX É UMA FERRAMENTA COMPLETA PARA A GESTÃO DA SUA CLÍNICA!
+  description: O sistema permite controlar todo o seu negócio, desde os agendamentos até a conciliação do faturamento.
+  description2: Com o Clinux você economiza recursos e otimiza tempo!
+  
 
 features:
   headline: Features

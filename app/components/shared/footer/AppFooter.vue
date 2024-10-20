@@ -94,5 +94,6 @@ const successMessage = ref('')
     display: flex;
     justify-content: center;
     gap: 20%;
+    background-color: pink;
   }
 </style>

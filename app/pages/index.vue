@@ -1,7 +1,9 @@
 <script setup lang="ts">
 // Components
-import HeroSection from '~/components/home/heroSection/HeroSection.vue'
+import HeroSection from '~/components/home/hero/HeroSection.vue'
 import FeaturesSection from '~/components/home/features/FeaturesSection.vue'
+import ClinuxSection from '~/components/home/clinux/ClinuxSection.vue'
+import TeleradiologySection from '~/components/home/teleradiology/TeleradiologySection.vue'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
@@ -20,6 +22,12 @@ useSeoMeta({
 
     <!-- FeaturesSection -->
     <FeaturesSection />
+
+    <!-- ClinuxSection -->
+    <ClinuxSection />
+
+    <!-- ClinuxSection -->
+    <TeleradiologySection />
 
     <ULandingSection
       :title="page.features.title"

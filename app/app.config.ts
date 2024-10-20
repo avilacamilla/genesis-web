@@ -44,10 +44,6 @@ export default defineAppConfig({
           }
         }
       }
-    },
-    landingSection: {
-      title: 'text-white',
-      description: 'text-white'
     }
   }
 })
