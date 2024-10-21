@@ -15,16 +15,16 @@ const successMessage = ref('')
 <template>
   <UFooter id="app-footer">
     <template #top>
-      <div class="footer-grid w-full p-0">
-        <ContactInfo />
+      <div class="footer-grid w-full p-0 sm:px-0 sm:gap-4">
+        <ContactInfo class="sm:px-0 sm:py-4" />
 
-        <div class="contact-form p-0">
+        <div class="contact-form p-0 sm:px-0">
           <form @submit.prevent="">
             <UFormGroup
               label="Entre em contato"
-              class="p-0"
+              class="p-0 sm:mt-4"
             >
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
                 <UInput
                   v-model="nome"
                   placeholder="Nome"
@@ -94,6 +94,11 @@ const successMessage = ref('')
     display: flex;
     justify-content: center;
     gap: 20%;
-    background-color: pink;
+  }
+
+  @media screen and (max-width: 760px) {
+    .footer-grid {
+      flex-direction: column;
+    }
   }
 </style>

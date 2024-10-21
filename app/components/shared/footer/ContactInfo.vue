@@ -30,4 +30,9 @@ const { data: footerData } = await useAsyncData('footer', () => queryContent('fo
     font-size: 0.9rem;
     line-height: 1.8;
   }
+  @media screen and (max-width: 760px) {
+    .ucard-container {
+      padding: 1rem 0;
+    }
+  }
 </style>
