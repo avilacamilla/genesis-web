@@ -4,6 +4,7 @@ import HeroSection from '~/components/home/hero/HeroSection.vue'
 import FeaturesSection from '~/components/home/features/FeaturesSection.vue'
 import ClinuxSection from '~/components/home/clinux/ClinuxSection.vue'
 import TeleradiologySection from '~/components/home/teleradiology/TeleradiologySection.vue'
+import BlogSection from '~/components/blog/BlogSection.vue'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
@@ -26,8 +27,11 @@ useSeoMeta({
     <!-- ClinuxSection -->
     <ClinuxSection />
 
-    <!-- ClinuxSection -->
+    <!-- TeleradioSection -->
     <TeleradiologySection />
+
+    <!-- BlogSection -->
+    <BlogSection />
 
     <ULandingSection
       :title="page.features.title"
