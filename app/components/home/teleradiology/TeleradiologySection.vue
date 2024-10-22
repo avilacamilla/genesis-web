@@ -12,7 +12,7 @@
     />
 
     <!-- Imagem e Botão -->
-    <div class="teleradiology-image">
+    <div class="teleradiology-image flex flex-col gap-2 items-center">
       <NuxtImg
         src="/images/arm.jpg"
         alt="Imagem de um braço com raios X"
@@ -21,7 +21,7 @@
 
       <UButton
         label="Conheça a solução"
-        class="bg-white text-black py-4 px-6 text-lg mt-4"
+        class="bg-white text-black py-4 px-12 text-lg mt-8 max-w-max"
       />
     </div>
   </section>

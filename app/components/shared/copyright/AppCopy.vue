@@ -5,7 +5,7 @@
 <template>
   <div class="app-copy">
     <div class="left">
-      <p class="text-gray-500 dark:text-white text-sm">
+      <p class="text-white dark:text-white text-sm">
         <NuxtLink to="/terms">
           Copyright © 2020. Todos os direitos reservados.
         </NuxtLink>
@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     padding: 1rem 0;
+    background-color: #236b97;
   }
 
   .left {

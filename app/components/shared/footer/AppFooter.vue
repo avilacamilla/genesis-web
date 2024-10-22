@@ -13,47 +13,43 @@ const successMessage = ref('')
 </script>
 
 <template>
-  <UFooter id="app-footer">
+  <UFooter id="app-footer" class="w-full m-0 p-0 w-full">
     <template #top>
-      <div class="footer-grid w-full p-0 sm:px-0 sm:gap-4">
-        <ContactInfo class="sm:px-0 sm:py-4" />
+      <div class="footer-grid w-full flex justify-center items-center">
+        <ContactInfo class="px-0 py-4" />
 
-        <div class="contact-form p-0 sm:px-0">
+        <div class="contact-form">
           <form @submit.prevent="">
             <UFormGroup
               label="Entre em contato"
-              class="p-0 sm:mt-4"
+              class="p-0 mt-4"
             >
               <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
                 <UInput
                   v-model="nome"
                   placeholder="Nome"
                   required
-                  class="p-0"
                 />
                 <UInput
                   v-model="email"
                   placeholder="Email"
                   type="email"
                   required
-                  class="p-0"
                 />
                 <UInput
                   v-model="empresa"
                   placeholder="Empresa"
-                  class="p-0"
                 />
                 <UInput
                   v-model="telefone"
                   placeholder="Telefone"
-                  class="p-0"
                 />
               </div>
               <UInput
                 v-model="mensagem"
                 placeholder="Mensagem"
                 type="textarea"
-                class="mt-4 p-0"
+                class="mt-4"
                 required
               />
 

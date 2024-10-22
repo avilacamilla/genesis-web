@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <!-- Badge com informação adicional -->
+    <!-- Badge com informação da Anvisa -->
     <div class="mt-4">
       <UBadge class="bg-white border text-primary font-medium p-3 md:p-4 rounded-lg text-lg md:text-xl mt-[2%]">
         ANVISA - 80918190001
@@ -34,6 +34,6 @@
 
 <style scoped>
   .text-primary {
-    color: #236b97; /* Usa a cor primária definida */
+    color: #236b97;
   }
 </style>
