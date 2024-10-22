@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    primary: 'accent', // Mantém a cor principal como accent
+    primary: 'accent',
     gray: 'zinc',
     variables: {
       light: {
@@ -32,18 +32,6 @@ export default defineAppConfig({
         container: 'py-0 lg:py-16'
       },
       bottom: {}
-    },
-    pricing: {
-      card: {
-        highlight: 'ring-gray-900 dark:ring-white',
-        features: {
-          item: {
-            icon: {
-              base: 'text-white dark:text-white'
-            }
-          }
-        }
-      }
     }
   }
 })
