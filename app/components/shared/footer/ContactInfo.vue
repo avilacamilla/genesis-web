@@ -1,17 +1,21 @@
 <script setup lang="ts">
 // Carregar os dados do arquivo footer.yml
-const { data: footerData } = await useAsyncData('footer', () => queryContent('footer').findOne())
+const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 </script>
 
 <template>
   <UContainer class="ucard-container">
     <h3 class="text-lg font-bold mb-4">
-      {{ footerData.title }}
+      {{ page.footer.title }}
     </h3>
 
     <div class="text-sm">
-      <p v-for="(item, index) in footerData.contact" :key="index">
+      <p v-for="(item, index) in page.footer.contact" :key="index">
         <strong>{{ item.label }}:</strong> {{ item.value }}
+      </p>
+      <p class="flex flex-col">
+        <strong>HORÁRIO DE FUNCIONAMENTO:</strong>
+        <strong>Segunda à Sexta de 8h às 18h</strong>
       </p>
     </div>
   </UContainer>
