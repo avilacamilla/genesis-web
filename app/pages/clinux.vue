@@ -1,9 +1,7 @@
 <script setup lang="ts">
-
+import HeroClinuxSection from '~/components/clinux/HeroClinuxSection.vue'
 </script>
 
 <template>
-  <div>
-    <h1>Preparando rota/Clinux*</h1>
-  </div>
+  <HeroClinuxSection />
 </template>

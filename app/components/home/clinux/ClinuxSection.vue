@@ -104,7 +104,7 @@ const items = [
           />
         </NuxtLink>
         <!-- Rota para Agende uma Demonstração com target _blank -->
-        <a href="/contactRequest" target="_blank">
+        <a href="/contactRequest">
           <UButton
             label="Agende uma Demonstração"
             class="bg-white text-accent py-4 px-6 text-base md:text-xl"

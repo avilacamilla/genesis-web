@@ -4,7 +4,7 @@ const { data: page } = await useAsyncData('index', () => queryContent('/').findO
 
 // Função para abrir a rota /contactRequest em uma nova aba
 const openContactRequestInNewTab = () => {
-  window.open('/contactRequest', '_blank')
+  window.open('/contactRequest')
 }
 </script>
 

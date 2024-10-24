@@ -1,0 +1,58 @@
+title: "Genesis tecnologia"
+subtitle: "Há duas décadas revolucionando a gestão médica no Brasil!"
+description: >
+  Somos uma empresa capixaba fundada em 2001, especializada em oferecer soluções robustas e simplificadas para a área da saúde.
+  Atendemos às necessidades de cada negócio e adequamos soluções de tecnologia para qualquer formato.
+  Estamos presentes em quase todo o país, com parceria de suporte regional em dois estados.
+
+mission:
+  title: "Missão"
+  content: >
+    Oferecer soluções que simplificam a gestão da medicina diagnóstica, com foco na qualidade atendendo à necessidade e à satisfação do cliente.
+
+vision:
+  title: "Visão"
+  content: >
+    Ser reconhecida pelo desenvolvimento de softwares e soluções para a área da medicina diagnóstica com o melhor custo-benefício do mercado.
+
+values:
+  title: "Valores"
+  items:
+    - title: "Honestidade"
+      description: "Valorizamos a transparência frente às demandas do cliente e a oferta de suporte tecnológico comprometido com a resolução apresentando soluções inteligentes."
+    - title: "Comprometimento"
+      description: "Somos comprometidos em cumprir o que é proposto pela empresa, focados na satisfação dos clientes e colaboradores."
+    - title: "Proximidade e Cumplicidade"
+      description: "Buscamos conhecer profundamente os processos dos clientes e simplificar o que está complexo com soluções inteligentes."
+    - title: "Sustentabilidade do Negócio"
+      description: "Estamos em constante atualização para manter os nossos softwares e suporte tecnológico útil e necessário ao nosso cliente com custos acessíveis."
+    - title: "Reconhecimento"
+      description: "Valorizamos os talentos desenvolvidos na empresa e apostamos no seu crescimento."
+    - title: "Qualidade"
+      description: "Trabalhamos para desenvolver nossas atividades com qualidade, focados na melhoria dos processos para atender os nossos clientes."
+
+qualityPolicy:
+  title: "Política de Qualidade"
+  content: >
+    Oferecer produtos de qualidade e suporte focado no atendimento com soluções inteligentes que satisfazem às necessidades dos clientes, comprometendo buscar melhorias e desenvolvimento da organização e colaboradores.
+
+successCases:
+  title: "Casos de sucesso"
+  logos:
+    - src: "/path/to/centro-medico-logo.png"
+      alt: "Centro Médico"
+    - src: "/path/to/cedus-logo.png"
+      alt: "CEDUS"
+    - src: "/path/to/examina-logo.png"
+      alt: "Exámina"
+    - src: "/path/to/instituto-coracao-logo.png"
+      alt: "Instituto do Coração"
+
+certifications:
+  title: "Nossas certificações"
+  items:
+    - src: "/path/to/certification-logo-1.png"
+      alt: "Certificação 1"
+    - src: "/path/to/certification-logo-2.png"
+      alt: "Certificação 2"
+  badge: "ANVISA - 80918190001"

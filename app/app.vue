@@ -4,6 +4,7 @@ import AppFooter from './components/shared/footer/AppFooter.vue'
 import AppCopy from './components/shared/copyright/AppCopy.vue'
 
 useHead({
+  title: 'Genesis Tecnologia - Soluções para gestão de clínicas!',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
@@ -13,12 +14,6 @@ useHead({
   htmlAttrs: {
     lang: 'pt'
   }
-})
-
-useSeoMeta({
-  ogImage: 'https://landing-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://landing-template.nuxt.dev/social-card.png',
-  twitterCard: 'summary_large_image'
 })
 </script>
 
