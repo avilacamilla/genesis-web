@@ -1,0 +1,19 @@
+pacsDicomvixHero:
+  title: DICOMVIX Sistema PACS
+  description: O PACS DICOMVIX oferece todos os recursos necessários para o médico fazer diagnósticos mais precisos, aumentar sua produtividade e otimizar seu tempo de trabalho.
+  buttonText: Conheça a solução
+
+pacsDicomvixDetailsSection:
+  description: >
+    Com uma realidade totalmente voltada para o mercado brasileiro, o sistema DICOMVIX permite armazenamento e visualização de imagens médicas (DICOM) de uma forma integrada ao Clinux.
+  certifiedBy: O sistema é certificado pela Anvisa e possibilita que as informações e imagens dos pacientes sejam compartilhadas e visualizadas de forma segura pelo médico de onde ele estiver.
+
+pacsDicomvixBenefitsSection:
+  title: Benefícios que a ferramenta oferece ao seu negócio
+  benefits:
+    - Agilidade e qualidade no acesso a imagens e laudos dos pacientes
+    - Diminuição do risco de perda de exames
+    - Mais facilidade na rotina dos profissionais de saúde
+
+pacsDicomvixScheduleSection:
+  title: Agende uma APRESENTAÇÃO
