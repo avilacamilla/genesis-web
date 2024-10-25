@@ -7,15 +7,6 @@ import TeleradiologySection from '~/components/home/teleradiology/TeleradiologyS
 import BlogSection from '~/components/home/blog/BlogSection.vue'
 import InformationsSection from '~/components/home/informations/InformationsSection.vue'
 import TestemonialsSection from '~/components/home/testemonials/TestemonialsSection.vue'
-
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
-
-useSeoMeta({
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description
-})
 </script>
 
 <template>

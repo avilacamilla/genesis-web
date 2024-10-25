@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import HeroClinuxSection from '~/components/clinux/HeroClinuxSection.vue'
+import HeroClinuxSection from '~/components/clinux/hero/HeroClinuxSection.vue'
 </script>
 
 <template>
+  <!-- HeroClinuxSection -->
   <HeroClinuxSection />
+
+  <!-- ProductsClinuxSection -->
 </template>
