@@ -10,11 +10,13 @@ const openContactRequestInNewTab = () => {
 
 <template>
   <UContainer class="mx-auto relative h-screen max-w-full">
+    <!-- Imagem de background -->
     <NuxtImg
       src="/images/bg-hero.jpg"
       alt="Background"
       class="absolute inset-0 w-full h-full object-cover brightness-75"
     />
+    <!-- Container que agrega título, parágrafo e botão de ação -->
     <UContainer
       class="
         absolute inset-0

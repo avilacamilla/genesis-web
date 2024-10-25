@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// Carregar o conteúdo de texto de index.yml
+const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 </script>
 
 <template>
@@ -10,23 +12,17 @@
       class="mx-auto w-[70%] md:w-[60%]"
     />
 
-    <!-- Texto principal e subtítulo -->
+    <!-- Badges com texto principal -->
     <div class="flex justify-center space-x-[6%] md:space-x-[12%]">
-      <div class="text-center">
-        <UBadge class="text-lg font-bold text-primary">PACS DICOMVIX</UBadge>
-      </div>
-      <div class="text-center">
-        <UBadge class="text-lg font-bold text-primary">Clinux</UBadge>
-      </div>
-      <div class="text-center">
-        <UBadge class="text-lg font-bold text-primary">E muito mais...</UBadge>
+      <div v-for="badge in page.featuresSection.badges" :key="badge.label" class="text-center">
+        <UBadge :class="badge.style">{{ badge.label }}</UBadge>
       </div>
     </div>
 
     <!-- Badge com informação da Anvisa -->
     <div class="mt-4">
-      <UBadge class="bg-white border text-primary font-medium p-3 md:p-4 rounded-lg text-lg md:text-xl mt-[2%]">
-        ANVISA - 80918190001
+      <UBadge :class="page.featuresSection.anvisaBadge.style">
+        {{ page.featuresSection.anvisaBadge.label }}
       </UBadge>
     </div>
   </UContainer>

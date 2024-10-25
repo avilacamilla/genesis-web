@@ -32,14 +32,21 @@ const blogPosts = [
     <h2 class="text-4xl font-bold text-center py-8 mb-8">
       Últimas postagens do nosso blog
     </h2>
-    <UBlogList orientation="horizontal" class="gap-x-0">
+    <UBlogList
+      orientation="horizontal"
+      class="gap-x-0"
+    >
       <div
         v-for="(post, index) in blogPosts"
         :key="index"
         class="flex flex-col items-start bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-3/4 mx-4"
       >
         <div class="relative">
-          <NuxtImg :src="post.image" alt="Blog post image" class="w-full h-48 object-cover" />
+          <NuxtImg
+            :src="post.image"
+            alt="Blog post image"
+            class="w-full h-48 object-cover"
+          />
           <div class="absolute top-0 left-0 bg-white text-blue-900 font-bold text-center p-4">
             <span class="block text-2xl">{{ post.date.split(' ')[0] }}</span>
             <span class="block text-sm">{{ post.date.split(' ')[1] }}</span>
@@ -63,7 +70,7 @@ const blogPosts = [
 </template>
 
 <style scoped>
-.mx-4 {
-  margin: 0 auto;
-}
+  .mx-4 {
+    margin: 0 auto;
+  }
 </style>

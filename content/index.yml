@@ -12,6 +12,20 @@ heroSection:
       target: _blank
       size: xl
 
+featuresSection:
+  title: Genesis Tecnologia - Soluções para gestão de clínicas!
+  description: Genesis Tecnologia.
+  badges:
+    - label: PACS DICOMVIX
+      style: text-lg font-bold text-primary
+    - label: Clinux
+      style: text-lg font-bold text-primary
+    - label: E muito mais...
+      style: text-lg font-bold text-primary
+  anvisaBadge:
+    label: ANVISA - 80918190001
+    style: bg-white border text-primary font-medium p-3 md:p-4 rounded-lg text-lg md:text-xl
+
 clinuxSection:
   title: Clinux
   subtitle: Gestão de clínicas

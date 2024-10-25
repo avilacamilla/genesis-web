@@ -2,6 +2,7 @@
 // Carregar o conteúdo de texto de index.yml
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
+// Conteúdo dos cards seguindo modelo
 const items = [
   {
     title: 'Agendamento Web',
@@ -33,11 +34,13 @@ const items = [
 
 <template>
   <UContainer class="mx-auto relative min-h-screen max-w-full p-16">
+    <!-- Imagem de background -->
     <NuxtImg
       src="/images/clinux-bg.png"
       alt="Background"
       class="absolute inset-0 w-full h-full object-cover brightness-75"
     />
+    <!-- Container que agrega título, subtítulo, parágrafo e cards -->
     <UContainer
       class="
         relative
@@ -59,6 +62,7 @@ const items = [
         <p class="text-base md:text-lg">
           {{ page.clinuxSection.description }}
         </p>
+        <!-- Ícone de engrenagem -->
         <NuxtImg
           src="/icons/cog.svg"
           alt="Ícone de engrenagens"
@@ -68,6 +72,7 @@ const items = [
           {{ page.clinuxSection.description2 }}
         </p>
         <div class="flex flex-col items-center py-6">
+          <!-- Título principal -->
           <h1 class="text-5xl md:text-7xl lg:text-9xl font-bold italic">
             {{ page.clinuxSection.title }}
           </h1>
@@ -77,7 +82,7 @@ const items = [
         </div>
       </div>
 
-      <!-- Ajuste de tamanho em ULandingCard -->
+      <!-- Container de cards dinâmicos -->
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
         <div
           v-for="(item, index) in items"
@@ -94,7 +99,7 @@ const items = [
         </div>
       </div>
 
-      <!-- Botões -->
+      <!-- Botões de ação -->
       <div class="flex flex-col md:flex-row justify-center space-x-0 md:space-x-4 space-y-4 md:space-y-0 mt-10">
         <!-- Rota para Conheça o Clinux -->
         <NuxtLink to="/clinux">
@@ -103,7 +108,7 @@ const items = [
             class="bg-white text-accent py-4 px-16 text-base md:text-xl"
           />
         </NuxtLink>
-        <!-- Rota para Agende uma Demonstração com target _blank -->
+        <!-- Rota para Agende uma Demonstração -->
         <a href="/contactRequest">
           <UButton
             label="Agende uma Demonstração"
@@ -124,6 +129,7 @@ const items = [
     font-size: 1.3rem;
   }
 
+  /* Responsividade: Ajusta tamanho de fontes em telas com largura menor que 768px */
   @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;

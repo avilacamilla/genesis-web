@@ -1,97 +1,59 @@
-![nuxt-ui-landing-social-card](https://github.com/nuxt-ui-pro/landing/assets/739984/d0919c96-e5f2-47e9-b460-44f87341218d)
+# Genesis - Web
+### Projeto em desenvolvimento*
 
-# Nuxt UI Pro - Landing template
+![Genesis-web](https://github.com/user-attachments/assets/09d297fc-1d65-4a9a-9712-593cb89b32ab)
 
-This starter lets you get started with [Nuxt UI Pro](https://ui.nuxt.com/pro) quickly.
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+Este é o site institucional da Genesis Tecnologia, uma empresa especializada em soluções para a gestão de clínicas e hospitais. O site foi desenvolvido utilizando Vue.js, com o suporte do template base do Nuxt UI Pro e diversos elementos de Nuxt UI Pro, além de ser estilizado com TailwindCSS para garantir flexibilidade e responsividade nos layouts.
 
-- [Live demo](https://landing-template.nuxt.dev/)
-- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/landing)
-- [Documentation](https://ui.nuxt.com/pro/getting-started)
+Tecnologias Utilizadas
+Vue.js: Framework JavaScript progressivo para a construção de interfaces de usuário.
+Nuxt UI Pro: Biblioteca de componentes premium para o Nuxt.js, proporcionando uma base sólida para o design e a implementação do projeto.
+TailwindCSS: Um framework CSS altamente customizável e de baixo nível, utilizado para estilizar o site com classes utilitárias.
+Funcionalidades do Site
+O site institucional da Genesis Tecnologia inclui as seguintes seções:
 
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/landing)
+Página Inicial: Apresenta os serviços e soluções oferecidas pela Genesis, com destaques para os principais módulos do software Clinux.
+Blog: Últimas postagens com dicas, informações e novidades relacionadas à gestão clínica.
+Casos de Sucesso: Mostra empresas parceiras e casos de sucesso que utilizam os sistemas da Genesis Tecnologia.
+Formulário de Contato: Facilita a comunicação com a empresa para suporte, consultas comerciais e dúvidas gerais.
+Como Clonar o Repositório
+Para clonar o projeto em seu ambiente local, siga as instruções abaixo:
 
-https://github.com/nuxt-ui-pro/landing/assets/904724/c7dd64a4-a09c-4cab-9572-92a02a5e06f9
+Como Clonar o Repositório
+Para clonar o projeto em seu ambiente local, siga as instruções abaixo:
 
-## Quick Start
+bash
+## git clone https://github.com/usuario/genesis-web.git
+Após clonar o repositório, navegue até o diretório do projeto:
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/landing
-```
+bash
+## cd genesis-web
+Instalação de Dependências
+Certifique-se de instalar as dependências do projeto.
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
+bash
+### pnpm
 pnpm install
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+bash
+### pnpm
 pnpm run dev
 
-# yarn
-yarn dev
+##
 
-# bun
-bun run dev
-```
+## Estrutura:
 
-## Production
+### components: Contém os componentes Vue que compõem a interface do site.
 
-Build the application for production:
+### pages: Contém as páginas principais do site, como a página inicial, blog, contato, etc.
 
-```bash
-# npm
-npm run build
+### public: Contém os arquivos estáticos como imagens, ícones e arquivos de mídia.
 
-# pnpm
-pnpm run build
+### content: Contém os arquivos .yml que armazenam os dados do conteúdo do site, como textos e informações de seções.
 
-# yarn
-yarn build
+##
 
-# bun
-bun run build
-```
+## Licença
+O projeto Genesis - Web está sob a licença MIT.
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Renovate integration
-
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
