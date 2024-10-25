@@ -4,7 +4,7 @@ clinuxHeroSection:
   subtitle: O sistema faz integração de todas as atividades da sua clínica, economizando recursos e otimizando tempo.
 
 clinuxModulesSection:
-  title: Principais módulos do Clinux:
+  title: Principais módulos do Clinux
   modules:
     - Agendamento
     - Atendimento
@@ -44,3 +44,29 @@ clinuxSolutionsSection:
 clinuxAuthorizeSection:
   title: Clinux Autoriza
   description: Essa solução foi criada para automatizar a autorização de exames e consultas com convênios, reduzindo o tempo e o trabalho manual dos operadores.
+
+contactSection:
+  title: Entre em contato
+  formFields:
+    - name: Nome
+    - email: Email
+    - company: Empresa
+    - phone: Telefone
+    - message: Mensagem
+    - privacyPolicy: Li e concordo com a Política de Privacidade.
+  buttonText: Enviar Mensagem
+
+footer:
+  contactDetails:
+    support: "+55 (27) 3227-6956"
+    commercial: "+55 (27) 3349-0376"
+    emailSupport: "suporte@genesis.com.br"
+    emailCommercial: "comercial@genesis.com.br"
+    address: "Rua José de Almeida Roubach, 95, sala 805, Praia do Suá, Vitória/ES"
+  socialMedia:
+    - platform: Facebook
+      url: "#"
+    - platform: LinkedIn
+      url: "#"
+    - platform: Instagram
+      url: "#"
