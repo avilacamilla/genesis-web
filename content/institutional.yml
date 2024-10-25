@@ -44,7 +44,7 @@ successCases:
     - src: "/path/to/cedus-logo.png"
       alt: "CEDUS"
     - src: "/path/to/examina-logo.png"
-      alt: "Exámina"
+      alt: "Examina"
     - src: "/path/to/instituto-coracao-logo.png"
       alt: "Instituto do Coração"
 
