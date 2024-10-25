@@ -2,3 +2,45 @@ clinuxHeroSection:
   title: Descomplique a gestão da sua clínica!
   description: O Clinux é a ferramenta de gestão de clínicas com melhor custo-benefício do mercado, que permite controlar todo o processo interno, desde os agendamentos até à conciliação do faturamento.
   subtitle: O sistema faz integração de todas as atividades da sua clínica, economizando recursos e otimizando tempo.
+
+clinuxModulesSection:
+  title: Principais módulos do Clinux:
+  modules:
+    - Agendamento
+    - Atendimento
+    - Laudo
+    - Estoque
+    - Faturamento
+    - Financeiro
+    - Business Intelligence
+    - Prontuário
+
+clinuxFeaturesSection:
+  title: Praticidades do Clinux na gestão da sua clínica
+  features:
+    - title: Controle de conciliação no agendamento
+      description: Relatórios dinâmicos e Business Intelligence. Laudos produzidos por reconhecimento de voz.
+    - title: Acesso a resultados de exames e intervenções
+      description: Resultados disponíveis para todos os setores da empresa.
+    - title: Integração entre todos os setores da empresa
+      description: Conciliação automática de convênios. Repasses médicos personalizados.
+  callToAction:
+    text: Solicite uma demonstração
+
+clinuxSolutionsSection:
+  title: O Clinux oferece soluções que podem revolucionar seu negócio
+  solutions:
+    - title: Agendamento Web
+      description: Solução que permite ao paciente fazer o agendamento de consultas e exames pela internet, sem a necessidade da intervenção de um atendente e com confirmação automática na clínica.
+    - title: Questionário Digital
+      description: Converte papeis em um questionário digital, com as informações diretamente para o médico antes do atendimento.
+    - title: Gestão à Vista
+      description: Um dashboard completo com gráficos de faturamento, capacidade de atendimento e histórico de pagamentos e recebimentos.
+    - title: Portal de Laudos
+      description: Um portal completo com funcionalidades para médicos e especialistas acessarem e emitirem laudos.
+    - title: Clinux Telerradiologia
+      description: Ferramenta de telemedicina para geração e análise de exames de imagem remotamente, com integração a especialistas.
+
+clinuxAuthorizeSection:
+  title: Clinux Autoriza
+  description: Essa solução foi criada para automatizar a autorização de exames e consultas com convênios, reduzindo o tempo e o trabalho manual dos operadores.
